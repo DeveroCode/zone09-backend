@@ -23,7 +23,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # 6. Copiar el archivo .env
-COPY .env .env
+COPY .env.example .env.example
 
 # 7. Instalar las dependencias de PHP con Composer
 RUN composer install --no-dev --optimize-autoloader
