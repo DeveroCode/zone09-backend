@@ -30,7 +30,7 @@ RUN php artisan optimize \
     && php artisan config:cache \
     && php artisan route:cache \
     && php artisan view:cache \
-    && php artisan migrate --seed --force
+    && php artisan migrate --force
 
 # 8. Asegurarse de que las carpetas de Laravel tengan los permisos adecuados
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
