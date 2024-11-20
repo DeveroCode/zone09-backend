@@ -31,6 +31,8 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 # Configurar el script como comando predeterminado
 ENTRYPOINT ["sh", "/usr/local/bin/entrypoint.sh"]
 
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 # Instalar dependencias de Laravel
 RUN composer install --no-dev --optimize-autoloader
 
