@@ -39,6 +39,8 @@ RUN composer install --no-dev --optimize-autoloader
 # Configurar permisos
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
+# Crear la migración para la tabla sessions RUN php artisan make:migration create_sessions_table --create=sessions
+
 # Configurar puerto de escucha
 EXPOSE 1000
 
