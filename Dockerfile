@@ -42,7 +42,7 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 # Crear la migración para la tabla sessions RUN php artisan make:migration create_sessions_table --create=sessions
 
 # Configurar puerto de escucha
-EXPOSE 1000
+EXPOSE 1010
 
 # Comando de inicio
 CMD ["php-fpm"]
